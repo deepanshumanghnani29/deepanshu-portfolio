@@ -1,63 +1,478 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Deepanshu Manghnani, Full Stack Developer and B.Tech student in Artificial Intelligence & Data Science.">
+    <title>Deepanshu Manghnani | Full Stack Developer Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav>
-        <h2 class="logo">MyPortfolio</h2>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-        </ul>
-    </nav>
+    <!-- Header / Navbar -->
+    <header class="navbar-container">
+        <nav class="navbar">
+            <a href="#home" class="logo">Deepanshu<span>.</span></a>
+            
+            <button id="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Deepanshu_Manghnani_Resume.pdf" class="btn-resume" download><i class="fa-solid fa-download"></i> Resume</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Home Section -->
-    <section id="home" class="header-section">
-        <h1>Hi, I am a Web Developer</h1>
-        <p>Welcome to my personal portfolio. I build simple and clean websites.</p>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="content-section">
-        <h2>About Me</h2>
-        <p>I am a beginner developer currently learning HTML, CSS, and JavaScript. I enjoy coding and solving problems. I want to create amazing web experiences!</p>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="content-section bg-light">
-        <h2>My Skills</h2>
-        <ul class="skills-list">
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>Basic Web Design</li>
-        </ul>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="content-section">
-        <h2>My Projects</h2>
-        <div class="project-box">
-            <div class="card">
-                <h3>Tic Tac Toe</h3>
-                <p>A simple 2-player game built with JS.</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg-glow hero-glow-1"></div>
+        <div class="hero-bg-glow hero-glow-2"></div>
+        <div class="hero-grid-pattern"></div>
+        
+        <div class="hero-content reveal-on-scroll">
+            <span class="hero-tagline">Full Stack Developer</span>
+            <h1 class="hero-title">Hi, I'm <span>Deepanshu Manghnani</span></h1>
+            <p class="hero-desc">
+                Full Stack Developer and B.Tech AI & Data Science student. I specialize in building scalable, responsive web applications using the MERN stack, RESTful APIs, and real-time WebSockets.
+            </p>
+            <div class="hero-ctas">
+                <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right-long"></i></a>
+                <a href="Deepanshu_Manghnani_Resume.pdf" class="btn btn-outline" download><i class="fa-solid fa-download"></i> Get Resume</a>
             </div>
-            <div class="card">
-                <h3>Stopwatch</h3>
-                <p>A time tracking app with lap features.</p>
+            <div class="hero-socials">
+                <a href="https://github.com/deepanshumanghnani29" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/deepanshu-manghnani-632847362" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:deepanshumanghnani@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
             </div>
-            <div class="card">
-                <h3>Weather App</h3>
-                <p>An app to check live weather data.</p>
+        </div>
+        
+        <div class="hero-graphic reveal-on-scroll">
+            <div class="code-terminal-card">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">developer.js</span>
+                </div>
+                <div class="terminal-body">
+                    <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  name: <span class="string">'Deepanshu Manghnani'</span>,
+  role: <span class="string">'Full Stack Developer'</span>,
+  education: <span class="string">'B.Tech AI & DS'</span>,
+  stack: <span class="string">'MERN Stack'</span>,
+  skills: [
+    <span class="string">'React.js'</span>, <span class="string">'Node.js'</span>, <span class="string">'Express.js'</span>,
+    <span class="string">'MongoDB'</span>, <span class="string">'Socket.io'</span>, <span class="string">'Supabase'</span>
+  ],
+  passion: <span class="string">'Problem-solving through clean, efficient code'</span>
+};
+
+<span class="keyword">function</span> <span class="function">greet</span>() {
+  console.log(<span class="string">'Hello, Welcome to my portfolio!'</span>);
+}</code></pre>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="about-section container reveal-on-scroll">
+        <div class="section-header">
+            <span class="section-subtitle">Who I Am</span>
+            <h2 class="section-title">About Me</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    I am a B.Tech student in <strong>Artificial Intelligence & Data Science</strong> at Vivekananda Global University, Jaipur and an aspiring Full Stack Developer with expertise in building scalable, responsive web applications using the MERN stack.
+                </p>
+                <p>
+                    I have hands-on experience in RESTful API development, real-time WebSocket messaging, database design, and workflow automation. I enjoy designing clean, responsive layouts as well as securing API routes and building robust server architectures.
+                </p>
+                <p>
+                    I am highly passionate about problem-solving through clean, efficient code, and creating robust user experiences.
+                </p>
+            </div>
+            
+            <div class="about-stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Education Focus</h3>
+                    <p>AI & Data Science (B.Tech 2027)</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Development Focus</h3>
+                    <p>MERN Stack & WebSockets (Socket.io)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section container reveal-on-scroll">
+        <div class="section-header">
+            <span class="section-subtitle">What I Know</span>
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="skills-grid">
+            <!-- Languages & Core CS -->
+            <div class="skill-category-card">
+                <div class="category-icon"><i class="fa-solid fa-terminal"></i></div>
+                <h3>Languages & Core</h3>
+                <ul class="skill-list">
+                    <li><i class="fa-brands fa-js"></i> JavaScript (ES6+)</li>
+                    <li><i class="fa-brands fa-python"></i> Python</li>
+                    <li><i class="fa-brands fa-html5"></i> HTML5 & CSS3</li>
+                    <li><i class="fa-solid fa-brain"></i> Data Structures & Algorithms</li>
+                    <li><i class="fa-solid fa-cubes"></i> OOP Principles</li>
+                </ul>
+            </div>
+            
+            <!-- Frontend Development -->
+            <div class="skill-category-card">
+                <div class="category-icon"><i class="fa-brands fa-react"></i></div>
+                <h3>Frontend Development</h3>
+                <ul class="skill-list">
+                    <li><i class="fa-brands fa-react"></i> React.js</li>
+                    <li><i class="fa-solid fa-mobile-screen"></i> Responsive Web Design</li>
+                    <li><i class="fa-solid fa-palette"></i> CSS Flexbox & Grid</li>
+                    <li><i class="fa-solid fa-layer-group"></i> State Management</li>
+                </ul>
+            </div>
+            
+            <!-- Backend & Databases -->
+            <div class="skill-category-card">
+                <div class="category-icon"><i class="fa-solid fa-server"></i></div>
+                <h3>Backend & Database</h3>
+                <ul class="skill-list">
+                    <li><i class="fa-brands fa-node-js"></i> Node.js</li>
+                    <li><i class="fa-solid fa-gears"></i> Express.js</li>
+                    <li><i class="fa-solid fa-arrows-spin"></i> RESTful APIs</li>
+                    <li><i class="fa-solid fa-key"></i> JWT Authentication</li>
+                    <li><i class="fa-solid fa-circle-nodes"></i> Socket.io (WebSockets)</li>
+                    <li><i class="fa-solid fa-database"></i> MongoDB & Supabase</li>
+                </ul>
+            </div>
+            
+            <!-- Tools & Libraries -->
+            <div class="skill-category-card">
+                <div class="category-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                <h3>Tools & Libraries</h3>
+                <ul class="skill-list">
+                    <li><i class="fa-brands fa-git-alt"></i> Git & GitHub</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Postman / REST API Testing</li>
+                    <li><i class="fa-solid fa-diagram-project"></i> n8n Automation</li>
+                    <li><i class="fa-solid fa-cogs"></i> ServiceNow Platform</li>
+                    <li><i class="fa-solid fa-chart-line"></i> Pandas, Matplotlib</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section container reveal-on-scroll">
+        <div class="section-header">
+            <span class="section-subtitle">My Work</span>
+            <h2 class="section-title">Projects</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-card-header">
+                    <span class="proj-badge">Full Stack</span>
+                    <h3>Job Portal Web Application</h3>
+                </div>
+                <div class="project-card-body">
+                    <p class="proj-desc">
+                        Architected a full-stack platform featuring role-based access control. Designed relational schemas and secured API routes with JWT authentication to manage applicant pipelines.
+                    </p>
+                    <div class="proj-features">
+                        <h4>Key Deliverables:</h4>
+                        <ul>
+                            <li>Relational schema design on MongoDB</li>
+                            <li>Role-based access control for recruiters and candidates</li>
+                            <li>JWT authentication for route protection</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card-footer">
+                    <div class="proj-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="proj-links">
+                        <a href="https://github.com/deepanshumanghnani29/Job_Portal_By_Deep" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i> Source</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-card-header">
+                    <span class="proj-badge">Full Stack</span>
+                    <h3>Real-Time Chat Application</h3>
+                </div>
+                <div class="project-card-body">
+                    <p class="proj-desc">
+                        Engineered a responsive messaging application delivering instant state synchronization via Socket.io. Integrated secure token-based authentication and optimized MongoDB storage for persistent chat history.
+                    </p>
+                    <div class="proj-features">
+                        <h4>Key Deliverables:</h4>
+                        <ul>
+                            <li>Real-time chat synchronization using Socket.io</li>
+                            <li>Secure token-based authentication logic</li>
+                            <li>Optimized database schemas for persistent storage</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card-footer">
+                    <div class="proj-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Socket.io</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="proj-links">
+                        <a href="https://github.com/deepanshumanghnani29" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i> Source</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-card-header">
+                    <span class="proj-badge">Frontend</span>
+                    <h3>Responsive Portfolio Website</h3>
+                </div>
+                <div class="project-card-body">
+                    <p class="proj-desc">
+                        Deployed a mobile-first showcase application utilizing React.js, CSS Flexbox, and dynamic media queries to represent projects, accomplishments, and skills.
+                    </p>
+                    <div class="proj-features">
+                        <h4>Key Deliverables:</h4>
+                        <ul>
+                            <li>Mobile-first design system layout</li>
+                            <li>Responsive grid/flex alignments</li>
+                            <li>Smooth animation styling and interactions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-card-footer">
+                    <div class="proj-tags">
+                        <span>React.js</span>
+                        <span>CSS Flexbox</span>
+                        <span>Media Queries</span>
+                    </div>
+                    <div class="proj-links">
+                        <a href="https://github.com/deepanshumanghnani29/SCT_TrackCode_04" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i> Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section container reveal-on-scroll">
+        <div class="section-header">
+            <span class="section-subtitle">My Path</span>
+            <h2 class="section-title">Work Experience</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="timeline">
+            <!-- Experience Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Apr 2026 – May 2026</div>
+                <div class="timeline-content">
+                    <h3>Web Development Intern</h3>
+                    <h4 class="company">Skill Craft Technology</h4>
+                    <p>
+                        Built and optimized front-end and full-stack web applications utilizing MERN stack fundamentals. Enhanced UI layout responsiveness and cross-browser compatibility across multiple device viewports.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Experience Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Jul 2026</div>
+                <div class="timeline-content">
+                    <h3>ServiceNow Virtual Intern</h3>
+                    <h4 class="company">SmartBridge x AICTE</h4>
+                    <p>
+                        Configured automated enterprise workflows, Flow Designer, and Automated Test Framework (ATF) scripts. Completed intensive hands-on labs aligned with Certified System Administrator (CSA) standards.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section container reveal-on-scroll">
+        <div class="section-header">
+            <span class="section-subtitle">Academic Credentials</span>
+            <h2 class="section-title">Education</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="education-card">
+            <div class="edu-header">
+                <div>
+                    <h3>Bachelor of Technology (B.Tech)</h3>
+                    <h4>Artificial Intelligence & Data Science</h4>
+                </div>
+                <span class="edu-date">Expected Graduation: 2027</span>
+            </div>
+            <div class="edu-body">
+                <p class="institution"><i class="fa-solid fa-school-flag"></i> Vivekananda Global University, Jaipur</p>
+                <div class="edu-badge-container">
+                    <span class="edu-badge"><i class="fa-solid fa-chart-simple"></i> CGPA: 8.5 / 10</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section container reveal-on-scroll">
+        <div class="section-header">
+            <span class="section-subtitle">Verified Accomplishments</span>
+            <h2 class="section-title">Certifications</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="certifications-grid">
+            <!-- Cert 1 -->
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                <h3>ServiceNow Virtual Internship</h3>
+                <p class="issuer">SmartBridge × AICTE</p>
+                <span class="date">Jul 2026</span>
+            </div>
+            
+            <!-- Cert 2 -->
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                <h3>Introduction to Front-End Development</h3>
+                <p class="issuer">Meta</p>
+                <span class="date">Jun 2026</span>
+            </div>
+
+            <!-- Cert 3 -->
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                <h3>Generative AI & LLMs: Architecture</h3>
+                <p class="issuer">IBM</p>
+                <span class="date">Jun 2026</span>
+            </div>
+            
+            <!-- Cert 4 -->
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                <h3>Python Programming Essentials</h3>
+                <p class="issuer">Rice University</p>
+                <span class="date">May 2026</span>
+            </div>
+            
+            <!-- Cert 5 -->
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                <h3>Data Analytics Job Simulation</h3>
+                <p class="issuer">Deloitte</p>
+                <span class="date">Nov 2025</span>
+            </div>
+            
+            <!-- Cert 6 -->
+            <div class="cert-card">
+                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
+                <h3>Data Science for Beginners</h3>
+                <p class="issuer">Board Infinity</p>
+                <span class="date">Feb 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Download Call-to-Action Section -->
+    <section class="resume-cta-section reveal-on-scroll">
+        <div class="resume-cta-content">
+            <h2>Interested in my profile?</h2>
+            <p>Download my comprehensive resume to view details about my skills, coursework, and projects.</p>
+            <a href="Deepanshu_Manghnani_Resume.pdf" class="btn btn-primary" download><i class="fa-solid fa-file-arrow-down"></i> Download Resume PDF</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section container reveal-on-scroll">
+        <div class="section-header">
+            <span class="section-subtitle">Get In Touch</span>
+            <h2 class="section-title">Contact</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="contact-card">
+            <h3>Let's collaborate!</h3>
+            <p>I am actively seeking internships and entry-level positions as a Full Stack or Software Developer. Feel free to reach out to me.</p>
+            
+            <div class="contact-methods">
+                <a href="mailto:deepanshumanghnani@gmail.com" class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <span>deepanshumanghnani@gmail.com</span>
+                </a>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                    <span>+91 7878280319</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <span>Jaipur, Rajasthan, India</span>
+                </div>
+            </div>
+            
+            <div class="contact-socials">
+                <a href="https://github.com/deepanshumanghnani29" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/deepanshu-manghnani-632847362" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">&copy; 2026 Deepanshu Manghnani. All Rights Reserved.</p>
+            <p class="tagline">Built with passion &amp; clean code.</p>
+        </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="script.js"></script>
 </body>
 </html>
