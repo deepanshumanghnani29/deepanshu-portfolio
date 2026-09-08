@@ -3,476 +3,980 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Deepanshu Manghnani, Full Stack Developer and B.Tech student in Artificial Intelligence & Data Science.">
-    <title>Deepanshu Manghnani | Full Stack Developer Portfolio</title>
+    <title>Deepanshu Manghnani | Full Stack Developer</title>
+    <meta name="description" content="Final-year B.Tech AI & Data Science student and Full Stack Developer building React applications, REST APIs, real-time Socket.io experiences, and data-driven systems.">
     
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Deepanshu Manghnani | Full Stack Developer">
+    <meta property="og:description" content="Final-year B.Tech AI & Data Science student and Full Stack Developer building responsive React applications, REST APIs, and real-time web experiences.">
+    <meta property="og:image" content="assets/images/deepanshu-portrait.webp">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='50%' y='68%' font-size='56' font-family='sans-serif' font-weight='800' fill='%2338bdf8' text-anchor='middle'>D</text></svg>">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FontAwesome for clean icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <header class="navbar-container">
-        <nav class="navbar">
-            <a href="#home" class="logo">Deepanshu<span>.</span></a>
-            
-            <button id="menu-toggle" aria-expanded="false" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- Accessible Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header / Sticky Navbar -->
+    <header class="navbar-header" id="navbar-header">
+        <nav class="navbar container" aria-label="Main Navigation">
+            <a href="#home" class="nav-logo" aria-label="Deepanshu Manghnani Home">
+                Deepanshu<span class="logo-accent">.</span>
+            </a>
+
+            <button id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                <span class="bar bar-1"></span>
+                <span class="bar bar-2"></span>
+                <span class="bar bar-3"></span>
             </button>
-            
-            <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="Deepanshu_Manghnani_Resume.pdf" class="btn-resume" download><i class="fa-solid fa-download"></i> Resume</a></li>
-            </ul>
+
+            <div class="nav-menu-wrapper" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="Deepanshu_Manghnani_Resume.pdf" class="btn btn-sm btn-nav-resume" download aria-label="Download Deepanshu's Resume PDF">
+                        <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Resume
+                    </a>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="hero-bg-glow hero-glow-1"></div>
-        <div class="hero-bg-glow hero-glow-2"></div>
-        <div class="hero-grid-pattern"></div>
-        
-        <div class="hero-content reveal-on-scroll">
-            <span class="hero-tagline">Full Stack Developer</span>
-            <h1 class="hero-title">Hi, I'm <span>Deepanshu Manghnani</span></h1>
-            <p class="hero-desc">
-                Full Stack Developer and B.Tech AI & Data Science student. I specialize in building scalable, responsive web applications using the MERN stack, RESTful APIs, and real-time WebSockets.
-            </p>
-            <div class="hero-ctas">
-                <a href="#projects" class="btn btn-primary">View Projects <i class="fa-solid fa-arrow-right-long"></i></a>
-                <a href="Deepanshu_Manghnani_Resume.pdf" class="btn btn-outline" download><i class="fa-solid fa-download"></i> Get Resume</a>
-            </div>
-            <div class="hero-socials">
-                <a href="https://github.com/deepanshumanghnani29" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/deepanshu-manghnani-632847362" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:deepanshumanghnani@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-        </div>
-        
-        <div class="hero-graphic reveal-on-scroll">
-            <div class="code-terminal-card">
-                <div class="terminal-header">
-                    <span class="dot red"></span>
-                    <span class="dot yellow"></span>
-                    <span class="dot green"></span>
-                    <span class="terminal-title">developer.js</span>
-                </div>
-                <div class="terminal-body">
-                    <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
-  name: <span class="string">'Deepanshu Manghnani'</span>,
-  role: <span class="string">'Full Stack Developer'</span>,
-  education: <span class="string">'B.Tech AI & DS'</span>,
-  stack: <span class="string">'MERN Stack'</span>,
-  skills: [
-    <span class="string">'React.js'</span>, <span class="string">'Node.js'</span>, <span class="string">'Express.js'</span>,
-    <span class="string">'MongoDB'</span>, <span class="string">'Socket.io'</span>, <span class="string">'Supabase'</span>
-  ],
-  passion: <span class="string">'Problem-solving through clean, efficient code'</span>
-};
+    <!-- Main Content Landmark -->
+    <main id="main-content">
 
-<span class="keyword">function</span> <span class="function">greet</span>() {
-  console.log(<span class="string">'Hello, Welcome to my portfolio!'</span>);
-}</code></pre>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- ==========================================================================
+             SECTION 1 — HERO
+             ========================================================================== -->
+        <section id="home" class="hero-section" aria-label="Introduction and Overview">
+            <div class="container hero-container">
+                <div class="hero-text-col reveal-on-scroll">
+                    <div class="availability-badge" role="status">
+                        <span class="status-pulse" aria-hidden="true"></span>
+                        <span>Available for Internship / Entry-Level Opportunities</span>
+                    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about-section container reveal-on-scroll">
-        <div class="section-header">
-            <span class="section-subtitle">Who I Am</span>
-            <h2 class="section-title">About Me</h2>
-            <div class="divider"></div>
-        </div>
-        
-        <div class="about-grid">
-            <div class="about-text">
-                <p>
-                    I am a B.Tech student in <strong>Artificial Intelligence & Data Science</strong> at Vivekananda Global University, Jaipur and an aspiring Full Stack Developer with expertise in building scalable, responsive web applications using the MERN stack.
-                </p>
-                <p>
-                    I have hands-on experience in RESTful API development, real-time WebSocket messaging, database design, and workflow automation. I enjoy designing clean, responsive layouts as well as securing API routes and building robust server architectures.
-                </p>
-                <p>
-                    I am highly passionate about problem-solving through clean, efficient code, and creating robust user experiences.
-                </p>
-            </div>
-            
-            <div class="about-stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                    <h3>Education Focus</h3>
-                    <p>AI & Data Science (B.Tech 2027)</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon"><i class="fa-solid fa-code"></i></div>
-                    <h3>Development Focus</h3>
-                    <p>MERN Stack & WebSockets (Socket.io)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section container reveal-on-scroll">
-        <div class="section-header">
-            <span class="section-subtitle">What I Know</span>
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="divider"></div>
-        </div>
-        
-        <div class="skills-grid">
-            <!-- Languages & Core CS -->
-            <div class="skill-category-card">
-                <div class="category-icon"><i class="fa-solid fa-terminal"></i></div>
-                <h3>Languages & Core</h3>
-                <ul class="skill-list">
-                    <li><i class="fa-brands fa-js"></i> JavaScript (ES6+)</li>
-                    <li><i class="fa-brands fa-python"></i> Python</li>
-                    <li><i class="fa-brands fa-html5"></i> HTML5 & CSS3</li>
-                    <li><i class="fa-solid fa-brain"></i> Data Structures & Algorithms</li>
-                    <li><i class="fa-solid fa-cubes"></i> OOP Principles</li>
-                </ul>
-            </div>
-            
-            <!-- Frontend Development -->
-            <div class="skill-category-card">
-                <div class="category-icon"><i class="fa-brands fa-react"></i></div>
-                <h3>Frontend Development</h3>
-                <ul class="skill-list">
-                    <li><i class="fa-brands fa-react"></i> React.js</li>
-                    <li><i class="fa-solid fa-mobile-screen"></i> Responsive Web Design</li>
-                    <li><i class="fa-solid fa-palette"></i> CSS Flexbox & Grid</li>
-                    <li><i class="fa-solid fa-layer-group"></i> State Management</li>
-                </ul>
-            </div>
-            
-            <!-- Backend & Databases -->
-            <div class="skill-category-card">
-                <div class="category-icon"><i class="fa-solid fa-server"></i></div>
-                <h3>Backend & Database</h3>
-                <ul class="skill-list">
-                    <li><i class="fa-brands fa-node-js"></i> Node.js</li>
-                    <li><i class="fa-solid fa-gears"></i> Express.js</li>
-                    <li><i class="fa-solid fa-arrows-spin"></i> RESTful APIs</li>
-                    <li><i class="fa-solid fa-key"></i> JWT Authentication</li>
-                    <li><i class="fa-solid fa-circle-nodes"></i> Socket.io (WebSockets)</li>
-                    <li><i class="fa-solid fa-database"></i> MongoDB & Supabase</li>
-                </ul>
-            </div>
-            
-            <!-- Tools & Libraries -->
-            <div class="skill-category-card">
-                <div class="category-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                <h3>Tools & Libraries</h3>
-                <ul class="skill-list">
-                    <li><i class="fa-brands fa-git-alt"></i> Git & GitHub</li>
-                    <li><i class="fa-solid fa-circle-check"></i> Postman / REST API Testing</li>
-                    <li><i class="fa-solid fa-diagram-project"></i> n8n Automation</li>
-                    <li><i class="fa-solid fa-cogs"></i> ServiceNow Platform</li>
-                    <li><i class="fa-solid fa-chart-line"></i> Pandas, Matplotlib</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section container reveal-on-scroll">
-        <div class="section-header">
-            <span class="section-subtitle">My Work</span>
-            <h2 class="section-title">Projects</h2>
-            <div class="divider"></div>
-        </div>
-        
-        <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-                <div class="project-card-header">
-                    <span class="proj-badge">Full Stack</span>
-                    <h3>Job Portal Web Application</h3>
-                </div>
-                <div class="project-card-body">
-                    <p class="proj-desc">
-                        Architected a full-stack platform featuring role-based access control. Designed relational schemas and secured API routes with JWT authentication to manage applicant pipelines.
+                    <p class="hero-kicker">FULL STACK DEVELOPER</p>
+                    <h1 class="hero-headline">
+                        Hi, I'm <span class="name-highlight">Deepanshu Manghnani</span>
+                    </h1>
+                    <p class="hero-subheadline">Final-Year B.Tech AI & Data Science Student</p>
+                    <p class="hero-description">
+                        I build responsive web applications, REST APIs and real-time experiences using React, Node.js, Express, Supabase/PostgreSQL, MongoDB and modern web technologies.
                     </p>
-                    <div class="proj-features">
-                        <h4>Key Deliverables:</h4>
-                        <ul>
-                            <li>Relational schema design on MongoDB</li>
-                            <li>Role-based access control for recruiters and candidates</li>
-                            <li>JWT authentication for route protection</li>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Projects</span>
+                            <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+                        </a>
+                        <a href="Deepanshu_Manghnani_Resume.pdf" class="btn btn-outline" download>
+                            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                            <span>Download Resume</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-socials" aria-label="Social Profiles">
+                        <a href="https://github.com/deepanshumanghnani29" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Deepanshu's GitHub Profile">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/deepanshu-manghnani-632847362" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Deepanshu's LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:deepanshumanghnani@gmail.com" class="social-link" aria-label="Send email to Deepanshu">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual-col reveal-on-scroll">
+                    <div class="portrait-card">
+                        <div class="portrait-wrapper">
+                            <picture>
+                                <source srcset="assets/images/deepanshu-portrait.webp" type="image/webp">
+                                <img src="assets/images/deepanshu-portrait.png" alt="Deepanshu Manghnani - Full Stack Developer in formal navy blazer" class="portrait-img" width="560" height="700" loading="eager" fetchpriority="high">
+                            </picture>
+                        </div>
+                        <div class="portrait-caption">
+                            <span class="caption-title">Deepanshu Manghnani</span>
+                            <span class="caption-subtitle">Jaipur, Rajasthan, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 2 — ABOUT ME
+             ========================================================================== -->
+        <section id="about" class="about-section section-padding" aria-label="About Deepanshu">
+            <div class="container">
+                <div class="section-heading text-center reveal-on-scroll">
+                    <span class="section-kicker">Background & Profile</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="heading-accent-line" aria-hidden="true"></div>
+                </div>
+
+                <div class="about-content-wrapper reveal-on-scroll">
+                    <div class="about-narrative">
+                        <p>
+                            I am a final-year B.Tech Artificial Intelligence & Data Science student at <strong>Vivekananda Global University, Jaipur</strong>, specializing in <strong>Full Stack Web Development</strong>.
+                        </p>
+                        <p>
+                            My technical work centers on designing responsive React frontends, robust Node.js/Express REST APIs, and real-time bidirectional applications using Socket.io and WebSockets. I design schemas and automate data workflows with <strong>PostgreSQL/Supabase</strong>, <strong>MongoDB Atlas</strong>, and <strong>n8n</strong>.
+                        </p>
+                        <p>
+                            I approach software development with an engineering mindset: writing clean, maintainable code, adhering to strong data structures & object-oriented principles, and delivering practical solutions ready for production.
+                        </p>
+                    </div>
+
+                    <div class="about-cards-grid">
+                        <div class="about-card">
+                            <div class="about-card-icon" aria-hidden="true">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="about-card-title">Education</h3>
+                            <p class="about-card-highlight">B.Tech in AI & Data Science</p>
+                            <p class="about-card-meta">Vivekananda Global University • 2027</p>
+                            <span class="about-card-badge">CGPA: 8.5 / 10</span>
+                        </div>
+
+                        <div class="about-card">
+                            <div class="about-card-icon" aria-hidden="true">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <h3 class="about-card-title">Development Focus</h3>
+                            <p class="about-card-highlight">Full Stack / MERN / APIs</p>
+                            <p class="about-card-meta">React, Node, Express, Supabase</p>
+                            <span class="about-card-badge">Real-Time & REST</span>
+                        </div>
+
+                        <div class="about-card">
+                            <div class="about-card-icon" aria-hidden="true">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <h3 class="about-card-title">Location</h3>
+                            <p class="about-card-highlight">Jaipur, Rajasthan, India</p>
+                            <p class="about-card-meta">Open to Relocation & Remote</p>
+                            <span class="about-card-badge">Immediate Availability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 3 — TECHNICAL SKILLS
+             ========================================================================== -->
+        <section id="skills" class="skills-section section-padding" aria-label="Technical Skills">
+            <div class="container">
+                <div class="section-heading text-center reveal-on-scroll">
+                    <span class="section-kicker">Core Competencies</span>
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="heading-accent-line" aria-hidden="true"></div>
+                </div>
+
+                <div class="skills-grid reveal-on-scroll">
+                    <!-- Category 1: Languages -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
+                            <h3>Languages</h3>
+                        </div>
+                        <ul class="skill-chips-list">
+                            <li class="skill-chip"><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript (ES6+)</li>
+                            <li class="skill-chip"><i class="fa-brands fa-python" aria-hidden="true"></i> Python</li>
+                            <li class="skill-chip"><i class="fa-solid fa-database" aria-hidden="true"></i> SQL</li>
+                            <li class="skill-chip"><i class="fa-brands fa-html5" aria-hidden="true"></i> HTML5</li>
+                            <li class="skill-chip"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i> CSS3</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 2: Frontend -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon" aria-hidden="true"><i class="fa-brands fa-react"></i></div>
+                            <h3>Frontend</h3>
+                        </div>
+                        <ul class="skill-chips-list">
+                            <li class="skill-chip"><i class="fa-brands fa-react" aria-hidden="true"></i> React.js</li>
+                            <li class="skill-chip"><i class="fa-solid fa-route" aria-hidden="true"></i> React Router</li>
+                            <li class="skill-chip"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Responsive Web Design</li>
+                            <li class="skill-chip"><i class="fa-solid fa-table-cells-large" aria-hidden="true"></i> CSS Flexbox</li>
+                            <li class="skill-chip"><i class="fa-solid fa-border-all" aria-hidden="true"></i> CSS Grid</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 3: Backend / APIs -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon" aria-hidden="true"><i class="fa-solid fa-server"></i></div>
+                            <h3>Backend / APIs</h3>
+                        </div>
+                        <ul class="skill-chips-list">
+                            <li class="skill-chip"><i class="fa-brands fa-node-js" aria-hidden="true"></i> Node.js</li>
+                            <li class="skill-chip"><i class="fa-solid fa-gear" aria-hidden="true"></i> Express.js</li>
+                            <li class="skill-chip"><i class="fa-solid fa-arrows-split-up-and-left" aria-hidden="true"></i> REST APIs</li>
+                            <li class="skill-chip"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Socket.io</li>
+                            <li class="skill-chip"><i class="fa-solid fa-network-wired" aria-hidden="true"></i> WebSockets</li>
+                            <li class="skill-chip"><i class="fa-solid fa-globe" aria-hidden="true"></i> HTTP</li>
+                            <li class="skill-chip"><i class="fa-solid fa-plug-circle-bolt" aria-hidden="true"></i> API Integration</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 4: Databases -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon" aria-hidden="true"><i class="fa-solid fa-database"></i></div>
+                            <h3>Databases</h3>
+                        </div>
+                        <ul class="skill-chips-list">
+                            <li class="skill-chip"><i class="fa-solid fa-server" aria-hidden="true"></i> PostgreSQL</li>
+                            <li class="skill-chip"><i class="fa-solid fa-bolt-lightning" aria-hidden="true"></i> Supabase</li>
+                            <li class="skill-chip"><i class="fa-solid fa-leaf" aria-hidden="true"></i> MongoDB Atlas</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 5: Tools / Testing -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon" aria-hidden="true"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                            <h3>Tools / Testing</h3>
+                        </div>
+                        <ul class="skill-chips-list">
+                            <li class="skill-chip"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Postman</li>
+                            <li class="skill-chip"><i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git</li>
+                            <li class="skill-chip"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</li>
+                            <li class="skill-chip"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i> n8n</li>
+                            <li class="skill-chip"><i class="fa-solid fa-cloud" aria-hidden="true"></i> ServiceNow</li>
+                            <li class="skill-chip"><i class="fa-solid fa-code-branch" aria-hidden="true"></i> VS Code</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 6: Core Computer Science -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <div class="category-icon" aria-hidden="true"><i class="fa-solid fa-brain"></i></div>
+                            <h3>Core Computer Science</h3>
+                        </div>
+                        <ul class="skill-chips-list">
+                            <li class="skill-chip"><i class="fa-solid fa-sitemap" aria-hidden="true"></i> Data Structures & Algorithms</li>
+                            <li class="skill-chip"><i class="fa-solid fa-cubes" aria-hidden="true"></i> OOP</li>
+                            <li class="skill-chip"><i class="fa-solid fa-table" aria-hidden="true"></i> DBMS</li>
                         </ul>
                     </div>
                 </div>
-                <div class="project-card-footer">
-                    <div class="proj-tags">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>Express</span>
-                        <span>MongoDB</span>
-                    </div>
-                    <div class="proj-links">
-                        <a href="https://github.com/deepanshumanghnani29/Job_Portal_By_Deep" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i> Source</a>
-                    </div>
-                </div>
             </div>
-            
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-card-header">
-                    <span class="proj-badge">Full Stack</span>
-                    <h3>Real-Time Chat Application</h3>
-                </div>
-                <div class="project-card-body">
-                    <p class="proj-desc">
-                        Engineered a responsive messaging application delivering instant state synchronization via Socket.io. Integrated secure token-based authentication and optimized MongoDB storage for persistent chat history.
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 4 — FEATURED PROJECTS
+             ========================================================================== -->
+        <section id="projects" class="projects-section section-padding" aria-label="Featured Projects">
+            <div class="container">
+                <div class="section-heading text-center reveal-on-scroll">
+                    <span class="section-kicker">Software Development</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-intro">
+                        Practical full-stack web applications featuring secure authentication, real-time communication, and automated workflows.
                     </p>
-                    <div class="proj-features">
-                        <h4>Key Deliverables:</h4>
-                        <ul>
-                            <li>Real-time chat synchronization using Socket.io</li>
-                            <li>Secure token-based authentication logic</li>
-                            <li>Optimized database schemas for persistent storage</li>
-                        </ul>
-                    </div>
+                    <div class="heading-accent-line" aria-hidden="true"></div>
                 </div>
-                <div class="project-card-footer">
-                    <div class="proj-tags">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>Socket.io</span>
-                        <span>MongoDB</span>
+
+                <div class="projects-list">
+                    <!-- Project 1: Freelance Milestone Room -->
+                    <article class="project-showcase-card reveal-on-scroll">
+                        <div class="project-visual-side">
+                            <div class="project-img-frame">
+                                <picture>
+                                    <source srcset="assets/images/projects/freelance-milestone-room.webp" type="image/webp">
+                                    <img src="assets/images/projects/freelance-milestone-room.png" alt="Freelance Milestone Room application dashboard showing project scope, revisions timeline, and acceptance state" class="project-screenshot" width="700" height="400" loading="lazy">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="project-info-side">
+                            <div class="project-type-tag">Full Stack / Hiring Challenge Project</div>
+                            <h3 class="project-title">Freelance Milestone Room</h3>
+                            <p class="project-description">
+                                A full-stack milestone collaboration application built for the NamoID engineering challenge, designed around secure authentication and a structured freelance milestone workflow.
+                            </p>
+
+                            <div class="project-key-features">
+                                <h4 class="features-label">Key Highlights:</h4>
+                                <ul class="feature-bullets">
+                                    <li><strong>Secure Authentication:</strong> Implemented NamoID Hosted Auth with HttpOnly session cookies for protected application states.</li>
+                                    <li><strong>Milestone Lifecycle:</strong> Multi-revision timeline architecture allowing client/freelancer scope confirmation and formal deliverable approvals.</li>
+                                    <li><strong>Express & MongoDB:</strong> Robust backend with Mongoose schemas persisting timeline states, revision requests, and project deliverables.</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-tech-stack" aria-label="Technologies used">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Vite</span>
+                                <span class="tech-tag">React Router</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Mongoose</span>
+                                <span class="tech-tag">NamoID Auth</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="https://github.com/deepanshumanghnani29/freelance-milestone-room" target="_blank" rel="noopener noreferrer" class="btn btn-project-code" aria-label="View Freelance Milestone Room source code on GitHub">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                                <a href="https://freelance-milestone-room.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-project-live" aria-label="Open Freelance Milestone Room live demo in a new tab">
+                                    Live Demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Job Portal Web Application -->
+                    <article class="project-showcase-card reveal-on-scroll">
+                        <div class="project-visual-side">
+                            <div class="project-img-frame">
+                                <picture>
+                                    <source srcset="assets/images/projects/job-portal-react-supabase.webp" type="image/webp">
+                                    <img src="assets/images/projects/job-portal-react-supabase.png" alt="CareerConnect Job Portal authentication and application dashboard" class="project-screenshot" width="700" height="400" loading="lazy">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="project-info-side">
+                            <div class="project-type-tag">Full Stack Web Application</div>
+                            <h3 class="project-title">Job Portal Web Application</h3>
+                            <p class="project-description">
+                                Built a React-based job portal with company listings, company-specific job openings, job search and application submission workflows.
+                            </p>
+
+                            <div class="project-key-features">
+                                <h4 class="features-label">Key Highlights:</h4>
+                                <ul class="feature-bullets">
+                                    <li><strong>Relational Data Design:</strong> Modeled users, companies, jobs, and applications in Supabase PostgreSQL with email/password authentication.</li>
+                                    <li><strong>Workflow Automation:</strong> Connected frontend user events to automated backend workflows and data handling using n8n webhooks.</li>
+                                    <li><strong>API Integration & Postman:</strong> Integrated external job listings API, rigorously validating HTTP status codes, payloads, and response times.</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-tech-stack" aria-label="Technologies used">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Supabase</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">n8n</span>
+                                <span class="tech-tag">REST APIs</span>
+                                <span class="tech-tag">Postman</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="https://github.com/deepanshumanghnani29/Job-Portal-React-Supabase" target="_blank" rel="noopener noreferrer" class="btn btn-project-code" aria-label="View Job Portal source code on GitHub">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                                <a href="https://job-portal-react-supabase.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-project-live" aria-label="Open Job Portal live demo in a new tab">
+                                    Live Demo <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Real-Time Chat Application -->
+                    <article class="project-showcase-card reveal-on-scroll">
+                        <div class="project-visual-side">
+                            <div class="project-img-frame">
+                                <picture>
+                                    <source srcset="assets/images/projects/real-time-chat-application.webp" type="image/webp">
+                                    <img src="assets/images/projects/real-time-chat-application.png" alt="Real-Time Chat Application interface with username login and messaging workspace" class="project-screenshot" width="700" height="400" loading="lazy">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="project-info-side">
+                            <div class="project-type-tag">Full Stack Messaging System</div>
+                            <h3 class="project-title">Real-Time Chat Application</h3>
+                            <p class="project-description">
+                                Built a responsive real-time messaging application using Socket.io with persistent MongoDB chat history.
+                            </p>
+
+                            <div class="project-key-features">
+                                <h4 class="features-label">Key Highlights:</h4>
+                                <ul class="feature-bullets">
+                                    <li><strong>Real-Time Sync:</strong> Engineered bidirectional instant messaging using Socket.io across concurrent client sessions.</li>
+                                    <li><strong>Persistent History:</strong> Built Express REST APIs to fetch previous chat history stored in MongoDB Atlas, surviving page reloads.</li>
+                                    <li><strong>Client State Management:</strong> Integrated sessionStorage for username persistence and crafted a mobile-first responsive layout.</li>
+                                </ul>
+                            </div>
+
+                            <div class="project-tech-stack" aria-label="Technologies used">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">Socket.io</span>
+                                <span class="tech-tag">MongoDB Atlas</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="https://github.com/deepanshumanghnani29/real-time-chat-application" target="_blank" rel="noopener noreferrer" class="btn btn-project-code" aria-label="View Real-Time Chat Application source code on GitHub">
+                                    <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="projects-github-cta text-center reveal-on-scroll">
+                    <a href="https://github.com/deepanshumanghnani29" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i> View More on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 5 — EXPERIENCE
+             ========================================================================== -->
+        <section id="experience" class="experience-section section-padding" aria-label="Experience">
+            <div class="container">
+                <div class="section-heading text-center reveal-on-scroll">
+                    <span class="section-kicker">Professional Journey</span>
+                    <h2 class="section-title">Experience</h2>
+                    <div class="heading-accent-line" aria-hidden="true"></div>
+                </div>
+
+                <div class="timeline-container reveal-on-scroll">
+                    <!-- Item 1: SkillCraft -->
+                    <div class="timeline-card">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">Web Development Intern</h3>
+                                <h4 class="timeline-company"><i class="fa-regular fa-building" aria-hidden="true"></i> SkillCraft Technology</h4>
+                            </div>
+                            <span class="timeline-duration">Apr 2026 – May 2026</span>
+                        </div>
+                        <div class="timeline-body">
+                            <p>
+                                Built and improved responsive web interfaces while practicing front-end and full-stack development using MERN stack fundamentals.
+                            </p>
+                            <p>
+                                Improved layout responsiveness and cross-browser compatibility across multiple screen sizes and viewports.
+                            </p>
+                        </div>
+                        <div class="timeline-footer">
+                            <button type="button" class="btn-cert-link" data-cert-title="Web Development Internship" data-cert-issuer="SkillCraft Technology" data-cert-date="May 16, 2026" data-cert-img="assets/certificates/previews/skillcraft-web-development-internship.webp" data-cert-pdf="assets/certificates/pdfs/skillcraft-web-development-internship.pdf">
+                                <i class="fa-solid fa-award" aria-hidden="true"></i> View Certificate
+                            </button>
+                        </div>
                     </div>
-                    <div class="proj-links">
-                        <a href="https://github.com/deepanshumanghnani29" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i> Source</a>
+
+                    <!-- Item 2: ServiceNow SmartBridge -->
+                    <div class="timeline-card">
+                        <div class="timeline-marker" aria-hidden="true"></div>
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-role">ServiceNow University Virtual Internship</h3>
+                                <h4 class="timeline-company"><i class="fa-regular fa-building" aria-hidden="true"></i> SmartBridge × AICTE × ServiceNow</h4>
+                            </div>
+                            <span class="timeline-duration">Jul 2026</span>
+                        </div>
+                        <div class="timeline-body">
+                            <p>
+                                Completed comprehensive hands-on labs in ServiceNow Administration Fundamentals, Flow Designer / Introduction to Flows, and Automated Test Framework (ATF) Essentials.
+                            </p>
+                            <p>
+                                Configured platform reporting, practiced workflows aligned with Certified System Administrator (CSA) preparation, and completed basic Agentic AI module introductions.
+                            </p>
+                        </div>
+                        <div class="timeline-footer">
+                            <button type="button" class="btn-cert-link" data-cert-title="ServiceNow University Virtual Internship" data-cert-issuer="ServiceNow University × SmartBridge × AICTE" data-cert-date="July 07, 2026" data-cert-img="assets/certificates/previews/servicenow-virtual-internship.webp" data-cert-pdf="assets/certificates/pdfs/servicenow-virtual-internship.pdf">
+                                <i class="fa-solid fa-award" aria-hidden="true"></i> View Certificate
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- Project 3 -->
-            <div class="project-card">
-                <div class="project-card-header">
-                    <span class="proj-badge">Frontend</span>
-                    <h3>Responsive Portfolio Website</h3>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 6 — EDUCATION
+             ========================================================================== -->
+        <section id="education" class="education-section section-padding" aria-label="Education">
+            <div class="container">
+                <div class="section-heading text-center reveal-on-scroll">
+                    <span class="section-kicker">Academic Background</span>
+                    <h2 class="section-title">Education</h2>
+                    <div class="heading-accent-line" aria-hidden="true"></div>
                 </div>
-                <div class="project-card-body">
-                    <p class="proj-desc">
-                        Deployed a mobile-first showcase application utilizing React.js, CSS Flexbox, and dynamic media queries to represent projects, accomplishments, and skills.
+
+                <div class="education-wrapper reveal-on-scroll">
+                    <!-- Primary Degree Card -->
+                    <div class="primary-edu-card">
+                        <div class="edu-card-top">
+                            <div class="edu-degree-group">
+                                <span class="edu-type-badge">Undergraduate Degree</span>
+                                <h3 class="edu-degree">Bachelor of Technology (B.Tech)</h3>
+                                <h4 class="edu-major">Artificial Intelligence & Data Science</h4>
+                            </div>
+                            <div class="edu-duration-group">
+                                <span class="edu-status-pill">Expected Graduation: 2027</span>
+                            </div>
+                        </div>
+
+                        <div class="edu-card-meta">
+                            <p class="edu-institution">
+                                <i class="fa-solid fa-school-flag" aria-hidden="true"></i>
+                                Vivekananda Global University, Jaipur
+                            </p>
+                            <div class="edu-score-badge">
+                                <span class="score-label">Cumulative GPA</span>
+                                <span class="score-value">8.5 / 10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Secondary School Details -->
+                    <div class="secondary-edu-grid">
+                        <div class="secondary-edu-card">
+                            <div class="sec-edu-icon" aria-hidden="true"><i class="fa-solid fa-book-bookmark"></i></div>
+                            <div class="sec-edu-info">
+                                <h4>Senior Secondary (Class XII)</h4>
+                                <p class="sec-edu-score">Result: <strong>84.60%</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="secondary-edu-card">
+                            <div class="sec-edu-icon" aria-hidden="true"><i class="fa-solid fa-book-bookmark"></i></div>
+                            <div class="sec-edu-info">
+                                <h4>Secondary School (Class X)</h4>
+                                <p class="sec-edu-score">Result: <strong>94.00%</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             SECTION 7 — CERTIFICATES & CREDENTIALS
+             ========================================================================== -->
+        <section id="certificates" class="certificates-section section-padding" aria-label="Certifications and Credentials">
+            <div class="container">
+                <div class="section-heading text-center reveal-on-scroll">
+                    <span class="section-kicker">Verified Accomplishments</span>
+                    <h2 class="section-title">Certificates & Credentials</h2>
+                    <p class="section-intro">
+                        Real course completions, internships, and platform simulations. Click on any certificate to view full details.
                     </p>
-                    <div class="proj-features">
-                        <h4>Key Deliverables:</h4>
-                        <ul>
-                            <li>Mobile-first design system layout</li>
-                            <li>Responsive grid/flex alignments</li>
-                            <li>Smooth animation styling and interactions</li>
-                        </ul>
+                    <div class="heading-accent-line" aria-hidden="true"></div>
+                </div>
+
+                <!-- Featured Certificates (Initial 6) -->
+                <div class="certificates-grid reveal-on-scroll">
+                    <!-- Cert 1: ServiceNow Virtual Internship -->
+                    <div class="cert-card">
+                        <button type="button" class="cert-thumbnail-btn" data-cert-title="ServiceNow University Virtual Internship" data-cert-issuer="ServiceNow University × SmartBridge × AICTE" data-cert-date="July 07, 2026" data-cert-img="assets/certificates/previews/servicenow-virtual-internship.webp" data-cert-pdf="assets/certificates/pdfs/servicenow-virtual-internship.pdf" aria-label="View ServiceNow University Virtual Internship Certificate">
+                            <img src="assets/certificates/previews/servicenow-virtual-internship.webp" alt="ServiceNow University Virtual Internship Certificate preview" class="cert-thumbnail-img" loading="lazy">
+                            <span class="cert-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="cert-card-body">
+                            <h3 class="cert-title">ServiceNow University Virtual Internship</h3>
+                            <p class="cert-issuer">ServiceNow University × SmartBridge × AICTE</p>
+                            <span class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> July 07, 2026</span>
+                            <div class="cert-actions">
+                                <button type="button" class="btn-cert-modal" data-cert-title="ServiceNow University Virtual Internship" data-cert-issuer="ServiceNow University × SmartBridge × AICTE" data-cert-date="July 07, 2026" data-cert-img="assets/certificates/previews/servicenow-virtual-internship.webp" data-cert-pdf="assets/certificates/pdfs/servicenow-virtual-internship.pdf">
+                                    <i class="fa-regular fa-eye" aria-hidden="true"></i> View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2: Web Development Internship -->
+                    <div class="cert-card">
+                        <button type="button" class="cert-thumbnail-btn" data-cert-title="Web Development Internship" data-cert-issuer="SkillCraft Technology" data-cert-date="May 16, 2026" data-cert-img="assets/certificates/previews/skillcraft-web-development-internship.webp" data-cert-pdf="assets/certificates/pdfs/skillcraft-web-development-internship.pdf" aria-label="View Web Development Internship Certificate">
+                            <img src="assets/certificates/previews/skillcraft-web-development-internship.webp" alt="SkillCraft Web Development Internship Certificate preview" class="cert-thumbnail-img" loading="lazy">
+                            <span class="cert-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="cert-card-body">
+                            <h3 class="cert-title">Web Development Internship</h3>
+                            <p class="cert-issuer">SkillCraft Technology</p>
+                            <span class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> May 16, 2026</span>
+                            <div class="cert-actions">
+                                <button type="button" class="btn-cert-modal" data-cert-title="Web Development Internship" data-cert-issuer="SkillCraft Technology" data-cert-date="May 16, 2026" data-cert-img="assets/certificates/previews/skillcraft-web-development-internship.webp" data-cert-pdf="assets/certificates/pdfs/skillcraft-web-development-internship.pdf">
+                                    <i class="fa-regular fa-eye" aria-hidden="true"></i> View Certificate
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3: Meta Front-End -->
+                    <div class="cert-card">
+                        <button type="button" class="cert-thumbnail-btn" data-cert-title="Introduction to Front-End Development" data-cert-issuer="Meta / Coursera" data-cert-date="June 18, 2026" data-cert-verify="https://coursera.org/verify/9U6JH1CT7M4Z" data-cert-img="assets/certificates/previews/meta-front-end-development.webp" data-cert-pdf="assets/certificates/pdfs/meta-front-end-development.pdf" aria-label="View Introduction to Front-End Development Certificate">
+                            <img src="assets/certificates/previews/meta-front-end-development.webp" alt="Meta Introduction to Front-End Development Certificate preview" class="cert-thumbnail-img" loading="lazy">
+                            <span class="cert-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="cert-card-body">
+                            <h3 class="cert-title">Introduction to Front-End Development</h3>
+                            <p class="cert-issuer">Meta / Coursera</p>
+                            <span class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> June 18, 2026</span>
+                            <div class="cert-actions">
+                                <button type="button" class="btn-cert-modal" data-cert-title="Introduction to Front-End Development" data-cert-issuer="Meta / Coursera" data-cert-date="June 18, 2026" data-cert-verify="https://coursera.org/verify/9U6JH1CT7M4Z" data-cert-img="assets/certificates/previews/meta-front-end-development.webp" data-cert-pdf="assets/certificates/pdfs/meta-front-end-development.pdf">
+                                    <i class="fa-regular fa-eye" aria-hidden="true"></i> View
+                                </button>
+                                <a href="https://coursera.org/verify/9U6JH1CT7M4Z" target="_blank" rel="noopener noreferrer" class="cert-verify-link" aria-label="Verify Meta certificate on Coursera">
+                                    Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cert 4: IBM Generative AI & LLMs -->
+                    <div class="cert-card">
+                        <button type="button" class="cert-thumbnail-btn" data-cert-title="Generative AI & LLMs: Architecture and Data Prep" data-cert-issuer="IBM / Coursera" data-cert-date="June 13, 2026" data-cert-verify="https://coursera.org/verify/LKEBFAHYR6OE" data-cert-img="assets/certificates/previews/ibm-generative-ai-llms.webp" data-cert-pdf="assets/certificates/pdfs/ibm-generative-ai-llms.pdf" aria-label="View IBM Generative AI and LLMs Certificate">
+                            <img src="assets/certificates/previews/ibm-generative-ai-llms.webp" alt="IBM Generative AI and LLMs Certificate preview" class="cert-thumbnail-img" loading="lazy">
+                            <span class="cert-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="cert-card-body">
+                            <h3 class="cert-title">Generative AI & LLMs: Architecture</h3>
+                            <p class="cert-issuer">IBM / Coursera</p>
+                            <span class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> June 13, 2026</span>
+                            <div class="cert-actions">
+                                <button type="button" class="btn-cert-modal" data-cert-title="Generative AI & LLMs: Architecture and Data Prep" data-cert-issuer="IBM / Coursera" data-cert-date="June 13, 2026" data-cert-verify="https://coursera.org/verify/LKEBFAHYR6OE" data-cert-img="assets/certificates/previews/ibm-generative-ai-llms.webp" data-cert-pdf="assets/certificates/pdfs/ibm-generative-ai-llms.pdf">
+                                    <i class="fa-regular fa-eye" aria-hidden="true"></i> View
+                                </button>
+                                <a href="https://coursera.org/verify/LKEBFAHYR6OE" target="_blank" rel="noopener noreferrer" class="cert-verify-link" aria-label="Verify IBM Generative AI certificate on Coursera">
+                                    Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cert 5: Rice Python Programming Essentials -->
+                    <div class="cert-card">
+                        <button type="button" class="cert-thumbnail-btn" data-cert-title="Python Programming Essentials" data-cert-issuer="Rice University / Coursera" data-cert-date="June 17, 2026" data-cert-verify="https://coursera.org/verify/2MUZTVYNQF3E" data-cert-img="assets/certificates/previews/rice-python-programming-essentials.webp" data-cert-pdf="assets/certificates/pdfs/rice-python-programming-essentials.pdf" aria-label="View Python Programming Essentials Certificate">
+                            <img src="assets/certificates/previews/rice-python-programming-essentials.webp" alt="Rice University Python Programming Essentials Certificate preview" class="cert-thumbnail-img" loading="lazy">
+                            <span class="cert-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="cert-card-body">
+                            <h3 class="cert-title">Python Programming Essentials</h3>
+                            <p class="cert-issuer">Rice University / Coursera</p>
+                            <span class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> June 17, 2026</span>
+                            <div class="cert-actions">
+                                <button type="button" class="btn-cert-modal" data-cert-title="Python Programming Essentials" data-cert-issuer="Rice University / Coursera" data-cert-date="June 17, 2026" data-cert-verify="https://coursera.org/verify/2MUZTVYNQF3E" data-cert-img="assets/certificates/previews/rice-python-programming-essentials.webp" data-cert-pdf="assets/certificates/pdfs/rice-python-programming-essentials.pdf">
+                                    <i class="fa-regular fa-eye" aria-hidden="true"></i> View
+                                </button>
+                                <a href="https://coursera.org/verify/2MUZTVYNQF3E" target="_blank" rel="noopener noreferrer" class="cert-verify-link" aria-label="Verify Rice Python certificate on Coursera">
+                                    Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cert 6: Deloitte Data Analytics -->
+                    <div class="cert-card">
+                        <button type="button" class="cert-thumbnail-btn" data-cert-title="Data Analytics Job Simulation" data-cert-issuer="Deloitte / Forage" data-cert-date="November 12, 2025" data-cert-img="assets/certificates/previews/deloitte-data-analytics-simulation.webp" data-cert-pdf="assets/certificates/pdfs/deloitte-data-analytics-simulation.pdf" aria-label="View Deloitte Data Analytics Simulation Certificate">
+                            <img src="assets/certificates/previews/deloitte-data-analytics-simulation.webp" alt="Deloitte Data Analytics Job Simulation Certificate preview" class="cert-thumbnail-img" loading="lazy">
+                            <span class="cert-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
+                        </button>
+                        <div class="cert-card-body">
+                            <h3 class="cert-title">Data Analytics Job Simulation</h3>
+                            <p class="cert-issuer">Deloitte / Forage</p>
+                            <span class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> November 12, 2025</span>
+                            <div class="cert-actions">
+                                <button type="button" class="btn-cert-modal" data-cert-title="Data Analytics Job Simulation" data-cert-issuer="Deloitte / Forage" data-cert-date="November 12, 2025" data-cert-img="assets/certificates/previews/deloitte-data-analytics-simulation.webp" data-cert-pdf="assets/certificates/pdfs/deloitte-data-analytics-simulation.pdf">
+                                    <i class="fa-regular fa-eye" aria-hidden="true"></i> View Certificate
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card-footer">
-                    <div class="proj-tags">
-                        <span>React.js</span>
-                        <span>CSS Flexbox</span>
-                        <span>Media Queries</span>
+
+                <!-- Additional Certificates Container (Revealed via Toggle) -->
+                <div class="additional-certificates-wrapper" id="extra-certificates" hidden>
+                    <div class="certificates-grid">
+                        <!-- Cert 7: Basic SQL Syntax -->
+                        <div class="cert-card">
+                            <button type="button" class="cert-thumbnail-btn" data-cert-title="Understanding Basic SQL Syntax" data-cert-issuer="Coursera" data-cert-date="Apr 10, 2025" data-cert-verify="https://coursera.org/verify/T46AZ3VSXS6N" data-cert-img="assets/certificates/previews/coursera-basic-sql-syntax.webp" data-cert-pdf="assets/certificates/pdfs/coursera-basic-sql-syntax.pdf" aria-label="View Understanding Basic SQL Syntax Certificate">
+                                <img src="assets/certificates/previews/coursera-basic-sql-syntax.webp" alt="Understanding Basic SQL Syntax Certificate preview" class="cert-thumbnail-img" loading="lazy">
+                                <span class="cert-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
+                            </button>
+                            <div class="cert-card-body">
+                                <h3 class="cert-title">Understanding Basic SQL Syntax</h3>
+                                <p class="cert-issuer">Coursera</p>
+                                <span class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Apr 10, 2025</span>
+                                <div class="cert-actions">
+                                    <button type="button" class="btn-cert-modal" data-cert-title="Understanding Basic SQL Syntax" data-cert-issuer="Coursera" data-cert-date="Apr 10, 2025" data-cert-verify="https://coursera.org/verify/T46AZ3VSXS6N" data-cert-img="assets/certificates/previews/coursera-basic-sql-syntax.webp" data-cert-pdf="assets/certificates/pdfs/coursera-basic-sql-syntax.pdf">
+                                        <i class="fa-regular fa-eye" aria-hidden="true"></i> View
+                                    </button>
+                                    <a href="https://coursera.org/verify/T46AZ3VSXS6N" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                                        Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 8: IBM Networking and Storage -->
+                        <div class="cert-card">
+                            <button type="button" class="cert-thumbnail-btn" data-cert-title="Introduction to Networking and Storage" data-cert-issuer="IBM / Coursera" data-cert-date="Nov 11, 2025" data-cert-verify="https://coursera.org/verify/MV4G4ISYXZQN" data-cert-img="assets/certificates/previews/ibm-networking-and-storage.webp" data-cert-pdf="assets/certificates/pdfs/ibm-networking-and-storage.pdf" aria-label="View Introduction to Networking and Storage Certificate">
+                                <img src="assets/certificates/previews/ibm-networking-and-storage.webp" alt="IBM Networking and Storage Certificate preview" class="cert-thumbnail-img" loading="lazy">
+                                <span class="cert-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
+                            </button>
+                            <div class="cert-card-body">
+                                <h3 class="cert-title">Intro to Networking & Storage</h3>
+                                <p class="cert-issuer">IBM / Coursera</p>
+                                <span class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Nov 11, 2025</span>
+                                <div class="cert-actions">
+                                    <button type="button" class="btn-cert-modal" data-cert-title="Introduction to Networking and Storage" data-cert-issuer="IBM / Coursera" data-cert-date="Nov 11, 2025" data-cert-verify="https://coursera.org/verify/MV4G4ISYXZQN" data-cert-img="assets/certificates/previews/ibm-networking-and-storage.webp" data-cert-pdf="assets/certificates/pdfs/ibm-networking-and-storage.pdf">
+                                        <i class="fa-regular fa-eye" aria-hidden="true"></i> View
+                                    </button>
+                                    <a href="https://coursera.org/verify/MV4G4ISYXZQN" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                                        Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 9: Alibaba Cloud Architecture -->
+                        <div class="cert-card">
+                            <button type="button" class="cert-thumbnail-btn" data-cert-title="Protecting Cloud Architecture with Alibaba Cloud" data-cert-issuer="Alibaba Cloud Academy / Coursera" data-cert-date="Nov 11, 2025" data-cert-verify="https://coursera.org/verify/FQLI05I7KGXM" data-cert-img="assets/certificates/previews/alibaba-cloud-architecture.webp" data-cert-pdf="assets/certificates/pdfs/alibaba-cloud-architecture.pdf" aria-label="View Alibaba Cloud Architecture Certificate">
+                                <img src="assets/certificates/previews/alibaba-cloud-architecture.webp" alt="Alibaba Cloud Architecture Certificate preview" class="cert-thumbnail-img" loading="lazy">
+                                <span class="cert-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
+                            </button>
+                            <div class="cert-card-body">
+                                <h3 class="cert-title">Protecting Cloud Architecture</h3>
+                                <p class="cert-issuer">Alibaba Cloud Academy / Coursera</p>
+                                <span class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Nov 11, 2025</span>
+                                <div class="cert-actions">
+                                    <button type="button" class="btn-cert-modal" data-cert-title="Protecting Cloud Architecture with Alibaba Cloud" data-cert-issuer="Alibaba Cloud Academy / Coursera" data-cert-date="Nov 11, 2025" data-cert-verify="https://coursera.org/verify/FQLI05I7KGXM" data-cert-img="assets/certificates/previews/alibaba-cloud-architecture.webp" data-cert-pdf="assets/certificates/pdfs/alibaba-cloud-architecture.pdf">
+                                        <i class="fa-regular fa-eye" aria-hidden="true"></i> View
+                                    </button>
+                                    <a href="https://coursera.org/verify/FQLI05I7KGXM" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                                        Verify <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 10: EXIN Cloud Computing Foundation -->
+                        <div class="cert-card">
+                            <button type="button" class="cert-thumbnail-btn" data-cert-title="EXIN Cloud Computing Foundation" data-cert-issuer="EXIN" data-cert-date="Nov 28, 2024" data-cert-img="assets/certificates/previews/exin-cloud-computing-foundation.webp" data-cert-pdf="assets/certificates/pdfs/exin-cloud-computing-foundation.pdf" aria-label="View EXIN Cloud Computing Foundation Certificate">
+                                <img src="assets/certificates/previews/exin-cloud-computing-foundation.webp" alt="EXIN Cloud Computing Foundation Certificate preview" class="cert-thumbnail-img" loading="lazy">
+                                <span class="cert-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
+                            </button>
+                            <div class="cert-card-body">
+                                <h3 class="cert-title">EXIN Cloud Computing Foundation</h3>
+                                <p class="cert-issuer">EXIN</p>
+                                <span class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Nov 28, 2024</span>
+                                <div class="cert-actions">
+                                    <button type="button" class="btn-cert-modal" data-cert-title="EXIN Cloud Computing Foundation" data-cert-issuer="EXIN" data-cert-date="Nov 28, 2024" data-cert-img="assets/certificates/previews/exin-cloud-computing-foundation.webp" data-cert-pdf="assets/certificates/pdfs/exin-cloud-computing-foundation.pdf">
+                                        <i class="fa-regular fa-eye" aria-hidden="true"></i> View Certificate
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 11: EXIN Blockchain Essentials -->
+                        <div class="cert-card">
+                            <button type="button" class="cert-thumbnail-btn" data-cert-title="EXIN Blockchain Essentials" data-cert-issuer="EXIN" data-cert-date="Oct 14, 2025" data-cert-img="assets/certificates/previews/exin-blockchain-essentials.webp" data-cert-pdf="assets/certificates/pdfs/exin-blockchain-essentials.pdf" aria-label="View EXIN Blockchain Essentials Certificate">
+                                <img src="assets/certificates/previews/exin-blockchain-essentials.webp" alt="EXIN Blockchain Essentials Certificate preview" class="cert-thumbnail-img" loading="lazy">
+                                <span class="cert-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
+                            </button>
+                            <div class="cert-card-body">
+                                <h3 class="cert-title">EXIN Blockchain Essentials</h3>
+                                <p class="cert-issuer">EXIN</p>
+                                <span class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Oct 14, 2025</span>
+                                <div class="cert-actions">
+                                    <button type="button" class="btn-cert-modal" data-cert-title="EXIN Blockchain Essentials" data-cert-issuer="EXIN" data-cert-date="Oct 14, 2025" data-cert-img="assets/certificates/previews/exin-blockchain-essentials.webp" data-cert-pdf="assets/certificates/pdfs/exin-blockchain-essentials.pdf">
+                                        <i class="fa-regular fa-eye" aria-hidden="true"></i> View Certificate
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 12: Accenture Acquiring Data -->
+                        <div class="cert-card">
+                            <button type="button" class="cert-thumbnail-btn" data-cert-title="Acquiring Data (Level 1 - AI Fundamentals)" data-cert-issuer="Accenture / FutureSkills Prime" data-cert-date="Nov 07, 2025" data-cert-img="assets/certificates/previews/accenture-futureskills-acquiring-data.webp" data-cert-pdf="assets/certificates/pdfs/accenture-futureskills-acquiring-data.pdf" aria-label="View Accenture Acquiring Data Certificate">
+                                <img src="assets/certificates/previews/accenture-futureskills-acquiring-data.webp" alt="Accenture FutureSkills Prime Acquiring Data Certificate preview" class="cert-thumbnail-img" loading="lazy">
+                                <span class="cert-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
+                            </button>
+                            <div class="cert-card-body">
+                                <h3 class="cert-title">Acquiring Data (AI Fundamentals)</h3>
+                                <p class="cert-issuer">Accenture / FutureSkills Prime</p>
+                                <span class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Nov 07, 2025</span>
+                                <div class="cert-actions">
+                                    <button type="button" class="btn-cert-modal" data-cert-title="Acquiring Data (Level 1 - AI Fundamentals)" data-cert-issuer="Accenture / FutureSkills Prime" data-cert-date="Nov 07, 2025" data-cert-img="assets/certificates/previews/accenture-futureskills-acquiring-data.webp" data-cert-pdf="assets/certificates/pdfs/accenture-futureskills-acquiring-data.pdf">
+                                        <i class="fa-regular fa-eye" aria-hidden="true"></i> View Certificate
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cert 13: Board Infinity Data Science -->
+                        <div class="cert-card">
+                            <button type="button" class="cert-thumbnail-btn" data-cert-title="Data Science for Beginners" data-cert-issuer="Board Infinity" data-cert-date="Nov 07, 2025" data-cert-img="assets/certificates/previews/board-infinity-data-science.webp" data-cert-pdf="assets/certificates/pdfs/board-infinity-data-science.pdf" aria-label="View Board Infinity Data Science Certificate">
+                                <img src="assets/certificates/previews/board-infinity-data-science.webp" alt="Board Infinity Data Science Certificate preview" class="cert-thumbnail-img" loading="lazy">
+                                <span class="cert-zoom-overlay"><i class="fa-solid fa-magnifying-glass-plus" aria-hidden="true"></i></span>
+                            </button>
+                            <div class="cert-card-body">
+                                <h3 class="cert-title">Data Science for Beginners</h3>
+                                <p class="cert-issuer">Board Infinity</p>
+                                <span class="cert-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Nov 07, 2025</span>
+                                <div class="cert-actions">
+                                    <button type="button" class="btn-cert-modal" data-cert-title="Data Science for Beginners" data-cert-issuer="Board Infinity" data-cert-date="Nov 07, 2025" data-cert-img="assets/certificates/previews/board-infinity-data-science.webp" data-cert-pdf="assets/certificates/pdfs/board-infinity-data-science.pdf">
+                                        <i class="fa-regular fa-eye" aria-hidden="true"></i> View Certificate
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="proj-links">
-                        <a href="https://github.com/deepanshumanghnani29/SCT_TrackCode_04" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i> Source</a>
-                    </div>
+                </div>
+
+                <!-- Toggle View All / Less Button -->
+                <div class="certificates-toggle-container text-center reveal-on-scroll">
+                    <button type="button" id="toggle-certificates-btn" class="btn btn-outline" aria-expanded="false" aria-controls="extra-certificates">
+                        <span class="toggle-btn-text">View All Certificates (13)</span>
+                        <i class="fa-solid fa-chevron-down toggle-icon" aria-hidden="true"></i>
+                    </button>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience-section container reveal-on-scroll">
-        <div class="section-header">
-            <span class="section-subtitle">My Path</span>
-            <h2 class="section-title">Work Experience</h2>
-            <div class="divider"></div>
-        </div>
-        
-        <div class="timeline">
-            <!-- Experience Item 1 -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Apr 2026 – May 2026</div>
-                <div class="timeline-content">
-                    <h3>Web Development Intern</h3>
-                    <h4 class="company">Skill Craft Technology</h4>
-                    <p>
-                        Built and optimized front-end and full-stack web applications utilizing MERN stack fundamentals. Enhanced UI layout responsiveness and cross-browser compatibility across multiple device viewports.
+        <!-- ==========================================================================
+             SECTION 8 — CONTACT
+             ========================================================================== -->
+        <section id="contact" class="contact-section section-padding" aria-label="Contact and Inquiries">
+            <div class="container">
+                <div class="section-heading text-center reveal-on-scroll">
+                    <span class="section-kicker">Get In Touch</span>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="section-intro">
+                        I'm currently open to internship and entry-level opportunities in Full Stack and Software Development. Feel free to reach out.
                     </p>
+                    <div class="heading-accent-line" aria-hidden="true"></div>
+                </div>
+
+                <div class="contact-card-wrapper reveal-on-scroll">
+                    <div class="contact-details-grid">
+                        <a href="mailto:deepanshumanghnani@gmail.com" class="contact-info-block">
+                            <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-meta">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">deepanshumanghnani@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/deepanshu-manghnani-632847362" target="_blank" rel="noopener noreferrer" class="contact-info-block">
+                            <div class="contact-icon" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="contact-meta">
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">linkedin.com/in/deepanshu-manghnani-632847362</span>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/deepanshumanghnani29" target="_blank" rel="noopener noreferrer" class="contact-info-block">
+                            <div class="contact-icon" aria-hidden="true"><i class="fa-brands fa-github"></i></div>
+                            <div class="contact-meta">
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">github.com/deepanshumanghnani29</span>
+                            </div>
+                        </a>
+
+                        <div class="contact-info-block">
+                            <div class="contact-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-meta">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Jaipur, Rajasthan, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-ctas-row">
+                        <a href="mailto:deepanshumanghnani@gmail.com" class="btn btn-primary">
+                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                            <span>Send Email</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/deepanshu-manghnani-632847362" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Experience Item 2 -->
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">Jul 2026</div>
-                <div class="timeline-content">
-                    <h3>ServiceNow Virtual Intern</h3>
-                    <h4 class="company">SmartBridge x AICTE</h4>
-                    <p>
-                        Configured automated enterprise workflows, Flow Designer, and Automated Test Framework (ATF) scripts. Completed intensive hands-on labs aligned with Certified System Administrator (CSA) standards.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education-section container reveal-on-scroll">
-        <div class="section-header">
-            <span class="section-subtitle">Academic Credentials</span>
-            <h2 class="section-title">Education</h2>
-            <div class="divider"></div>
-        </div>
-        
-        <div class="education-card">
-            <div class="edu-header">
-                <div>
-                    <h3>Bachelor of Technology (B.Tech)</h3>
-                    <h4>Artificial Intelligence & Data Science</h4>
-                </div>
-                <span class="edu-date">Expected Graduation: 2027</span>
-            </div>
-            <div class="edu-body">
-                <p class="institution"><i class="fa-solid fa-school-flag"></i> Vivekananda Global University, Jaipur</p>
-                <div class="edu-badge-container">
-                    <span class="edu-badge"><i class="fa-solid fa-chart-simple"></i> CGPA: 8.5 / 10</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
-    <!-- Certifications Section -->
-    <section id="certifications" class="certifications-section container reveal-on-scroll">
-        <div class="section-header">
-            <span class="section-subtitle">Verified Accomplishments</span>
-            <h2 class="section-title">Certifications</h2>
-            <div class="divider"></div>
-        </div>
-        
-        <div class="certifications-grid">
-            <!-- Cert 1 -->
-            <div class="cert-card">
-                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
-                <h3>ServiceNow Virtual Internship</h3>
-                <p class="issuer">SmartBridge × AICTE</p>
-                <span class="date">Jul 2026</span>
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <p class="copyright">&copy; 2026 Deepanshu Manghnani</p>
+                <p class="footer-tagline">Full Stack Developer • Jaipur, India</p>
             </div>
-            
-            <!-- Cert 2 -->
-            <div class="cert-card">
-                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
-                <h3>Introduction to Front-End Development</h3>
-                <p class="issuer">Meta</p>
-                <span class="date">Jun 2026</span>
+            <div class="footer-links" aria-label="Footer navigation">
+                <a href="https://github.com/deepanshumanghnani29" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <span class="footer-sep" aria-hidden="true">•</span>
+                <a href="https://www.linkedin.com/in/deepanshu-manghnani-632847362" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <span class="footer-sep" aria-hidden="true">•</span>
+                <a href="mailto:deepanshumanghnani@gmail.com">Email</a>
             </div>
-
-            <!-- Cert 3 -->
-            <div class="cert-card">
-                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
-                <h3>Generative AI & LLMs: Architecture</h3>
-                <p class="issuer">IBM</p>
-                <span class="date">Jun 2026</span>
-            </div>
-            
-            <!-- Cert 4 -->
-            <div class="cert-card">
-                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
-                <h3>Python Programming Essentials</h3>
-                <p class="issuer">Rice University</p>
-                <span class="date">May 2026</span>
-            </div>
-            
-            <!-- Cert 5 -->
-            <div class="cert-card">
-                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
-                <h3>Data Analytics Job Simulation</h3>
-                <p class="issuer">Deloitte</p>
-                <span class="date">Nov 2025</span>
-            </div>
-            
-            <!-- Cert 6 -->
-            <div class="cert-card">
-                <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
-                <h3>Data Science for Beginners</h3>
-                <p class="issuer">Board Infinity</p>
-                <span class="date">Feb 2025</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Resume Download Call-to-Action Section -->
-    <section class="resume-cta-section reveal-on-scroll">
-        <div class="resume-cta-content">
-            <h2>Interested in my profile?</h2>
-            <p>Download my comprehensive resume to view details about my skills, coursework, and projects.</p>
-            <a href="Deepanshu_Manghnani_Resume.pdf" class="btn btn-primary" download><i class="fa-solid fa-file-arrow-down"></i> Download Resume PDF</a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section container reveal-on-scroll">
-        <div class="section-header">
-            <span class="section-subtitle">Get In Touch</span>
-            <h2 class="section-title">Contact</h2>
-            <div class="divider"></div>
-        </div>
-        
-        <div class="contact-card">
-            <h3>Let's collaborate!</h3>
-            <p>I am actively seeking internships and entry-level positions as a Full Stack or Software Developer. Feel free to reach out to me.</p>
-            
-            <div class="contact-methods">
-                <a href="mailto:deepanshumanghnani@gmail.com" class="contact-item">
-                    <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                    <span>deepanshumanghnani@gmail.com</span>
-                </a>
-                <div class="contact-item">
-                    <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
-                    <span>+91 7878280319</span>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <span>Jaipur, Rajasthan, India</span>
-                </div>
-            </div>
-            
-            <div class="contact-socials">
-                <a href="https://github.com/deepanshumanghnani29" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/deepanshu-manghnani-632847362" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <p class="copyright">&copy; 2026 Deepanshu Manghnani. All Rights Reserved.</p>
-            <p class="tagline">Built with passion &amp; clean code.</p>
         </div>
     </footer>
 
-    <!-- Main JS -->
+    <!-- ==========================================================================
+         CERTIFICATE LIGHTBOX MODAL (ACCESSIBLE)
+         ========================================================================== -->
+    <div id="cert-modal" class="cert-modal" role="dialog" aria-modal="true" aria-labelledby="modal-cert-title" hidden>
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-dialog">
+            <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close certificate preview">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+            <div class="modal-preview-wrapper">
+                <img id="modal-cert-img" src="" alt="Certificate Preview" class="modal-cert-image">
+            </div>
+            <div class="modal-details">
+                <div class="modal-info">
+                    <h3 id="modal-cert-title" class="modal-title">Certificate Title</h3>
+                    <p id="modal-cert-issuer" class="modal-issuer">Issuer Organization</p>
+                    <span id="modal-cert-date" class="modal-date"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Date</span>
+                </div>
+                <div class="modal-actions">
+                    <a id="modal-cert-pdf" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i> Open PDF
+                    </a>
+                    <a id="modal-cert-verify" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline modal-verify-btn" hidden>
+                        <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Verify Credential
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
